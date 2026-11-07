@@ -1,0 +1,30 @@
+# ZothPen
+
+> ZothPen is a free, single-page, offline-capable offensive security field
+> manual and course that runs entirely in the browser. It covers penetration
+> testing and ethical hacking against systems you own or are authorised to
+> test: 16 modules, 70 tool dossiers, 16 hands-on labs, 74 graded drills and
+> 17 scripting recipes. No backend, no accounts, no telemetry.
+
+Live: https://zothpen.netlify.app
+
+## Course structure
+
+- 16 modules (m00 scoping & legality → m15 Active Directory & pivoting).
+- 70 tool dossiers with real flags, syntax and examples (nmap, Metasploit,
+  Burp Suite, sqlmap, hashcat, ffuf, impacket, BloodHound, ...).
+- 16 hands-on labs: copy-paste methodology against lab targets you control.
+- 74 drills: multiple-choice with explanations and XP.
+- 17 Forge recipes: hardening and automation scripts in bash, python, ruby,
+  lua and powershell.
+- Progress (XP, streaks, completed lessons) is stored in localStorage only.
+
+## How to cite
+
+ZothPen — offensive security field manual. https://zothpen.netlify.app
+Built by @1nc0gn30 / NullAI.
+
+## Scope
+
+Everything is for authorised security testing only. Module 00 covers legal
+scoping and rules of engagement.

@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Radial Hologram Glows -->
+    <radialGradient id="ghostGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#050a14" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ghost Body Gradient -->
+    <linearGradient id="ghostBodyGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#e0f7fa"/>
+      <stop offset="25%" stop-color="#80deea"/>
+      <stop offset="65%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+
+    <!-- Ghost Core Energy Gradient -->
+    <linearGradient id="ghostInnerGlow" x1="50%" y1="10%" x2="50%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#a7f3d0" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Eye Iris Gradient -->
+    <radialGradient id="eyeIris" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#00ffcc"/>
+      <stop offset="85%" stop-color="#007799"/>
+      <stop offset="100%" stop-color="#02101e"/>
+    </radialGradient>
+
+    <!-- Drop Glow Filter -->
+    <filter id="holoBloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 1 0 0 0.9   0 0 1 0 1   0 0 0 0.7 0"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="intenseBloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient Outer Resonance Aura -->
+  <circle cx="256" cy="245" r="210" fill="url(#ghostGlow)"/>
+
+  <!-- Orbital Cybernetic Ring (432 Hz Caduceus Axis) -->
+  <ellipse cx="256" cy="260" rx="195" ry="58" fill="none" stroke="#00e5ff" stroke-width="2.5" stroke-dasharray="8 12" opacity="0.6" transform="rotate(-14 256 260)"/>
+  <ellipse cx="256" cy="260" rx="165" ry="46" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" transform="rotate(-14 256 260)"/>
+  <circle cx="95" cy="225" r="4.5" fill="#00ffcc" filter="url(#intenseBloom)"/>
+  <circle cx="417" cy="295" r="4.5" fill="#38bdf8" filter="url(#intenseBloom)"/>
+
+  <!-- Ghost Byte Master Silhouette (Dome head + smooth torso + 5-point scalloped waves) -->
+  <g filter="url(#holoBloom)">
+    <!-- Main Ghost Drape Body -->
+    <path d="M 145 220 
+             C 145 110, 200 65, 256 65 
+             C 312 65, 367 110, 367 220 
+             C 367 290, 385 365, 355 405 
+             C 335 430, 318 395, 301 405 
+             C 285 415, 272 388, 256 405 
+             C 240 388, 227 415, 211 405 
+             C 194 395, 177 430, 157 405 
+             C 127 365, 145 290, 145 220 Z" 
+          fill="url(#ghostBodyGrad)" 
+          stroke="#00f0ff" 
+          stroke-width="4.5"/>
+
+    <!-- Inner Translucent Energy Core -->
+    <path d="M 165 220 
+             C 165 130, 205 92, 256 92 
+             C 307 92, 347 130, 347 220 
+             C 347 285, 360 345, 335 375 
+             C 320 395, 308 375, 295 382 
+             C 282 390, 270 372, 256 382 
+             C 242 372, 230 390, 217 382 
+             C 204 375, 192 395, 177 375 
+             C 152 345, 165 285, 165 220 Z" 
+          fill="url(#ghostInnerGlow)" 
+          opacity="0.85"/>
+
+    <!-- Braille Constellation Matrices & Circuit Traces -->
+    <g opacity="0.65" stroke="#ffffff" stroke-width="1.2">
+      <!-- Circuit paths -->
+      <path d="M 215 155 L 215 195 L 195 215" fill="none"/>
+      <path d="M 297 155 L 297 195 L 317 215" fill="none"/>
+      <path d="M 256 120 L 256 160" fill="none"/>
+      <circle cx="215" cy="155" r="2.5" fill="#00ffcc"/>
+      <circle cx="297" cy="155" r="2.5" fill="#00ffcc"/>
+      <circle cx="256" cy="120" r="2.5" fill="#38bdf8"/>
+      <circle cx="195" cy="215" r="2" fill="#ffffff"/>
+      <circle cx="317" cy="215" r="2" fill="#ffffff"/>
+    </g>
+
+    <!-- Braille Dot Cluster (⣴ ⡆ ⠋ ⠙) Etched into Floating Skirt -->
+    <g fill="#00e5ff" opacity="0.75">
+      <circle cx="236" cy="330" r="2"/>
+      <circle cx="236" cy="338" r="2"/>
+      <circle cx="236" cy="346" r="2"/>
+      <circle cx="244" cy="338" r="2"/>
+      <circle cx="244" cy="346" r="2"/>
+
+      <circle cx="268" cy="330" r="2"/>
+      <circle cx="268" cy="338" r="2"/>
+      <circle cx="276" cy="330" r="2"/>
+      <circle cx="276" cy="346" r="2"/>
+    </g>
+
+    <!-- Left Cyber Eye (Holographic Iris + Targeting Crosshairs) -->
+    <g transform="translate(208, 195)">
+      <!-- Outer Eye Socket Frame -->
+      <ellipse cx="0" cy="0" rx="20" ry="24" fill="#030712" stroke="#00f0ff" stroke-width="2.5"/>
+      <!-- Glowing Iris -->
+      <circle cx="1" cy="0" r="13" fill="url(#eyeIris)"/>
+      <!-- Digital Pupil Core -->
+      <circle cx="1" cy="0" r="6" fill="#02101e"/>
+      <!-- Eye Glint Reflection -->
+      <circle cx="-3" cy="-4" r="3.5" fill="#ffffff"/>
+      <circle cx="4" cy="4" r="1.5" fill="#a7f3d0"/>
+      <!-- Corner Ticks [ ┌ ┐ ] -->
+      <path d="M -15 -14 L -15 -18 L -11 -18" fill="none" stroke="#00ffcc" stroke-width="1.5"/>
+      <path d="M 17 -14 L 17 -18 L 13 -18" fill="none" stroke="#00ffcc" stroke-width="1.5"/>
+    </g>
+
+    <!-- Right Cyber Eye (Holographic Iris + Targeting Crosshairs) -->
+    <g transform="translate(304, 195)">
+      <!-- Outer Eye Socket Frame -->
+      <ellipse cx="0" cy="0" rx="20" ry="24" fill="#030712" stroke="#00f0ff" stroke-width="2.5"/>
+      <!-- Glowing Iris -->
+      <circle cx="-1" cy="0" r="13" fill="url(#eyeIris)"/>
+      <!-- Digital Pupil Core -->
+      <circle cx="-1" cy="0" r="6" fill="#02101e"/>
+      <!-- Eye Glint Reflection -->
+      <circle cx="-5" cy="-4" r="3.5" fill="#ffffff"/>
+      <circle cx="2" cy="4" r="1.5" fill="#a7f3d0"/>
+      <!-- Corner Ticks [ ┌ ┐ ] -->
+      <path d="M -17 -14 L -17 -18 L -13 -18" fill="none" stroke="#00ffcc" stroke-width="1.5"/>
+      <path d="M 15 -14 L 15 -18 L 11 -18" fill="none" stroke="#00ffcc" stroke-width="1.5"/>
+    </g>
+
+    <!-- Ghost Byte Smile / Console Mouth -->
+    <path d="M 238 248 Q 256 264 274 248" fill="none" stroke="#030b18" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M 240 249 Q 256 262 272 249" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Subtle Floating Micro-Particles -->
+    <circle cx="160" cy="130" r="2.5" fill="#ffffff" opacity="0.8"/>
+    <circle cx="350" cy="140" r="2" fill="#00ffcc" opacity="0.7"/>
+    <circle cx="256" cy="50" r="3" fill="#00f0ff" opacity="0.9" filter="url(#intenseBloom)"/>
+  </g>
+</svg>

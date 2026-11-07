@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ZothPen OG card source</title>
+<!--
+  Source for og.png (1200x630 social card).
+  Render (no build step, no deps):
+    python3 -m http.server 8192 --bind 127.0.0.1    # from the zothpen/ root
+    google-chrome --headless=new --disable-gpu --hide-scrollbars \
+      --screenshot=og.png --window-size=1200,630 \
+      http://127.0.0.1:8192/tools/og-card.html
+  Keep the CSS inline so the card renders identically to the deployed brand.
+-->
+<style>
+  @font-face { font-family: 'DotGothic16'; src: url('../assets/fonts/dotgothic16.ttf') format('truetype'); }
+  @font-face { font-family: 'JetBrains Mono'; src: url('../assets/fonts/jetbrains-mono.woff2') format('woff2'); }
+  @font-face { font-family: 'JetBrains Mono B'; src: url('../assets/fonts/jetbrains-mono-bold.woff2') format('woff2'); font-weight: 700; }
+
+  :root{
+    --void:#0B0B0C; --smoke:#121315; --smoke2:#16181B; --line:#26292D;
+    --ink:#F2F0EA; --dim:#A6A198; --dim2:#85807A;
+    --accent:#7CE0B0; --accent2:#E0C97C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:630px;overflow:hidden;background:var(--void);}
+  body{font-family:'JetBrains Mono',ui-monospace,monospace;color:var(--ink);}
+
+  .card{position:relative;width:1200px;height:630px;padding:52px 56px;display:flex;gap:44px;
+        background:
+          radial-gradient(680px 420px at 8% 0%, rgba(124,224,176,.10), transparent 70%),
+          radial-gradient(520px 380px at 100% 100%, rgba(224,201,124,.06), transparent 70%),
+          var(--void);}
+  /* scanlines + faint grid, matching the CRT look of the app */
+  .card::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(to bottom, rgba(255,255,255,.028) 0 1px, transparent 1px 3px);}
+  .col{position:relative;z-index:2}
+  .left{flex:1 1 auto;display:flex;flex-direction:column;min-width:0}
+  .right{flex:0 0 372px;display:flex;flex-direction:column;justify-content:center}
+
+  .kicker{font-size:14px;letter-spacing:3.5px;color:var(--accent);text-transform:uppercase}
+  .kicker span{color:var(--dim2)}
+
+  .mark{font-family:'DotGothic16',monospace;font-size:96px;line-height:1;letter-spacing:5px;
+        margin:26px 0 18px;color:var(--ink)}
+  .mark b{color:var(--accent);font-weight:400}
+
+  .tag{font-size:25px;letter-spacing:2.4px;color:var(--dim);text-transform:uppercase}
+
+  .rule{height:1px;background:linear-gradient(to right,var(--line),transparent);margin:30px 0 26px}
+
+  .stats{display:flex;flex-wrap:wrap;gap:8px}
+  .stat{border:1px solid var(--line);background:var(--smoke);border-radius:6px;
+        padding:8px 11px;font-size:13.5px;color:var(--dim);white-space:nowrap}
+  .stat b{color:var(--ink);font-family:'JetBrains Mono B',monospace;font-weight:700}
+  .stat i{color:var(--accent);font-style:normal}
+
+  .foot{margin-top:auto;display:flex;align-items:center;gap:14px;font-size:16px}
+  .url{color:var(--accent);font-family:'JetBrains Mono B',monospace}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--dim2)}
+  .meta{color:var(--dim2);font-size:14px;letter-spacing:1.2px;text-transform:uppercase}
+
+  .term{background:var(--smoke2);border:1px solid var(--line);border-radius:8px;overflow:hidden;
+        box-shadow:0 22px 60px rgba(0,0,0,.55)}
+  .tbar{display:flex;align-items:center;gap:7px;padding:11px 13px;border-bottom:1px solid var(--line);
+        background:#131518}
+  .tbar u{width:9px;height:9px;border-radius:50%;background:#3A3E44;display:block}
+  .tbar em{margin-left:8px;font-style:normal;font-size:12px;color:var(--dim2);letter-spacing:1.4px}
+  .tbody{padding:16px 16px 20px;font-size:13.5px;line-height:1.72}
+  .p{color:var(--accent)}
+  .o{color:var(--dim)}
+  .w{color:var(--accent2)}
+  .caret{display:inline-block;width:8px;height:15px;background:var(--accent);
+         vertical-align:-3px;animation:none}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="col left">
+    <div class="kicker">nullai <span>/ free / no account</span></div>
+    <div class="mark">ZOTH<b>PEN</b></div>
+    <div class="tag">Offensive security field manual</div>
+    <div class="rule"></div>
+    <div class="stats">
+      <div class="stat"><b>16</b> modules</div>
+      <div class="stat"><b>70</b> tool dossiers</div>
+      <div class="stat"><b>16</b> hands-on labs</div>
+      <div class="stat"><b>74</b> drills</div>
+      <div class="stat"><b>17</b> forge recipes</div>
+    </div>
+    <div class="foot">
+      <span class="url">zothpen.netlify.app</span>
+      <span class="dot"></span>
+      <span class="meta">kali &middot; parrot &middot; offline &middot; no telemetry</span>
+    </div>
+  </div>
+
+  <div class="col right">
+    <div class="term">
+      <div class="tbar"><u></u><u></u><u></u><em>operator@penbox</em></div>
+      <div class="tbody">
+        <div><span class="p">$</span> <span class="w">nmap</span> -sV -T4 -p- lab.local</div>
+        <div><span class="o">22/tcp&nbsp;&nbsp; open&nbsp; ssh</span></div>
+        <div><span class="o">443/tcp&nbsp; open&nbsp; https</span></div>
+        <div><span class="o">8080/tcp open&nbsp; http-proxy</span></div>
+        <div><span class="p">$</span> <span class="w">ffuf</span> -w /usr/share/wfuzz.txt -u http://lab/FUZZ</div>
+        <div><span class="o">/admin&nbsp; /backup&nbsp; /api/v1</span></div>
+        <div><span class="p">$</span> <span class="w">hydra</span> -l admin -P rockyou.txt ssh://lab.local</div>
+        <div><span class="p">$</span> <span class="caret"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

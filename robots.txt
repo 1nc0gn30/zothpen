@@ -1,0 +1,29 @@
+# ZothPen — offensive security field manual (standalone static site).
+# Zero tracking, no backend, no cookies. Everything runs client-side.
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /_selftest.html
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://zothpen.netlify.app/sitemap.xml

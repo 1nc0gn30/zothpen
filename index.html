@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-phosphor="green" data-scan="on" data-bloom="on" data-motion="on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZothPen — Free Offensive Security &amp; Penetration Testing Manual</title>
+<meta name="description" content="ZothPen is a free offline penetration-testing field manual: 16 modules, 70 tool dossiers, 16 labs and 74 drills for Kali Linux and Parrot OS. No account, no paywall, runs in your browser.">
+<meta name="keywords" content="penetration testing, offensive security, ethical hacking, pentesting field manual, Kali Linux, Parrot OS, nmap, Metasploit, Burp Suite, sqlmap, Active Directory, free pentest training, OSCP study, CTF practice">
+<meta name="author" content="1nc0gn30 / NullAI">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0B0B0C">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://zothpen.netlify.app/">
+<link rel="icon" type="image/png" href="assets/img/ghostbyte.png">
+<link rel="shortcut icon" type="image/png" href="assets/img/ghostbyte.png">
+<link rel="apple-touch-icon" href="assets/img/ghostbyte.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZothPen">
+<meta property="og:title" content="ZothPen — Free Offensive Security &amp; Penetration Testing Manual">
+<meta property="og:description" content="A free, offline, browser-based penetration-testing course: 16 modules, 70 tool dossiers, 16 hands-on labs, 74 graded drills. No account, no telemetry.">
+<meta property="og:url" content="https://zothpen.netlify.app/">
+<meta property="og:image" content="https://zothpen.netlify.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ZothPen — offensive security field manual">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ZothPen — Free Offensive Security &amp; Penetration Testing Manual">
+<meta name="twitter:description" content="Free offline pentest course in the browser: 16 modules, 70 tool dossiers, 16 labs, 74 drills. Kali &amp; Parrot focused.">
+<meta name="twitter:image" content="https://zothpen.netlify.app/og.png">
+<meta name="twitter:image:alt" content="ZothPen — offensive security field manual">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://zothpen.netlify.app/#website",
+      "url": "https://zothpen.netlify.app/",
+      "name": "ZothPen",
+      "alternateName": "ZothPen — offensive security field manual",
+      "description": "A free, offline, browser-based offensive security field manual and course.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://zothpen.netlify.app/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zothpen.netlify.app/#org",
+      "name": "NullAI",
+      "url": "https://nullai.tech/",
+      "sameAs": [ "https://github.com/NullAITech" ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://zothpen.netlify.app/#app",
+      "name": "ZothPen — offensive security field manual",
+      "url": "https://zothpen.netlify.app/",
+      "applicationCategory": "EducationalApplication",
+      "applicationSubCategory": "Cybersecurity training",
+      "operatingSystem": "Any modern web browser",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@id": "https://zothpen.netlify.app/#org" },
+      "featureList": [
+        "16 modules from legal scoping to Active Directory and pivoting",
+        "70 tool dossiers with real flags and syntax",
+        "16 hands-on labs against targets you control",
+        "74 graded drills with explanations and XP",
+        "17 scripting recipes in bash, python, ruby, lua and powershell",
+        "Runs entirely in the browser with localStorage progress only"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://zothpen.netlify.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is ZothPen free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every module, tool dossier, lab and drill is free and unlocked. There are no accounts, no paywall and no telemetry; your progress, XP and streak are stored only in your browser's localStorage." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does ZothPen cover?",
+          "acceptedAnswer": { "@type": "Answer", "text": "16 modules covering legal scoping and rules of engagement, reconnaissance, exploitation, privilege escalation and Active Directory attacks, plus 70 tool dossiers (nmap, Metasploit, Burp Suite, sqlmap, hashcat, ffuf, impacket, BloodHound and more), 16 hands-on labs, 74 graded drills and 17 scripting recipes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need Kali Linux or Parrot OS to use it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. ZothPen itself is a static site that runs in any modern browser, on any operating system. Kali Linux and Parrot OS are what the commands and labs are written for, so you will need a suitable test environment to actually run them." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use ZothPen for systems I do not own?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Every technique and lab is intended only for systems you own or have explicit written permission to assess. Module 00 covers legal scoping and rules of engagement before any tool is introduced." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="crt-frame" aria-hidden="true"></div>
+<canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ BOOT ============ -->
+<div id="boot" class="boot">
+  <pre id="boottext" class="boottext" aria-hidden="true"></pre>
+  <button id="bootskip" class="bootskip">[ skip ]</button>
+</div>
+
+<!-- ============ APP SHELL ============ -->
+<div id="app" class="app" hidden>
+
+  <header id="topbar" class="topbar">
+    <div class="brand">
+      <span class="brand-mark" id="brandMark" title="Click to cycle phosphor reality"></span>
+      <span class="brand-name">ZOTH<b>PEN</b></span>
+      <span class="brand-sub">offensive security field manual</span>
+    </div>
+    <div class="topbar-mid">
+      <div class="xp">
+        <span class="xp-label" id="xpLabel">lvl 1 · script kiddie</span>
+        <span class="xp-track"><span class="xp-fill" id="xpFill"></span></span>
+        <span class="xp-val" id="xpVal">0/100</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="chip" id="streakChip" title="days in a row you trained">streak 0d</span>
+      <button class="btn" id="floatingConsoleBtn" title="Toggle Floating Sovereign Console (Press 'c' or '~')">▚ console</button>
+      <button class="btn" id="paletteBtn" title="Command palette">⌘K search</button>
+      <button class="btn" id="tweakBtn" title="Appearance">tweaks</button>
+    </div>
+  </header>
+
+  <div class="shell">
+
+    <nav id="sidebar" class="sidebar" aria-label="Course map">
+      <div id="sidebarInner"></div>
+    </nav>
+
+    <main id="main" class="main" tabindex="-1">
+      <div id="view" class="view"></div>
+    </main>
+
+    <aside id="rail" class="rail" aria-label="Status">
+      <div id="railInner"></div>
+    </aside>
+
+  </div>
+
+  <footer id="statusbar" class="statusbar">
+    <div class="statuskeys" id="statuskeys"></div>
+    <div class="statusright">
+      <a class="statuslink" id="repoLink" href="https://github.com/NullAITech/zothpen"
+         target="_blank" rel="noopener noreferrer" title="Source code on GitHub">✦ source · github</a>
+      <span id="statusMsg" class="statusmsg">ready.</span>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ============ OVERLAYS ============ -->
+<div id="palette" class="overlay" hidden>
+  <div class="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette-head">
+      <span class="prompt-char">:</span>
+      <input id="paletteInput" type="text" autocomplete="off" spellcheck="false"
+             placeholder="jump to module, tool, lab, drill…  (type a command or a topic)">
+    </div>
+    <ul id="paletteList" class="palette-list" role="listbox"></ul>
+    <div class="palette-foot">
+      <span><b>&#9166;</b> open</span><span><b>&#8593;&#8595;</b> move</span><span><b>esc</b> close</span>
+    </div>
+  </div>
+</div>
+
+<div id="tweaks" class="overlay" hidden>
+  <div class="tweaks" role="dialog" aria-modal="true" aria-label="Appearance">
+    <div class="tweaks-head"><span>▚ DISPLAY TWEAKS</span><button class="btn x" data-close="tweaks">esc</button></div>
+    <div class="tweaks-body">
+      <label class="tweak-row">phosphor
+        <select id="twPhosphor">
+          <option value="green">P1 green (classic)</option>
+          <option value="amber">P3 amber (legacy)</option>
+          <option value="ice">P4 white / ice</option>
+          <option value="magenta">P7 magenta (exotic)</option>
+        </select>
+      </label>
+      <label class="tweak-row">font reality
+        <select id="twFont">
+          <option value="pixel">DotGothic16 (16-bit cyber pixel)</option>
+          <option value="vt220">Glass TTY VT220 (retro CRT)</option>
+          <option value="terminus">Terminus (UNIX console)</option>
+          <option value="jetbrains">JetBrains Mono (modern dev)</option>
+        </select>
+      </label>
+      <label class="tweak-row">scanlines <input type="checkbox" id="twScan" checked></label>
+      <label class="tweak-row">bloom <input type="checkbox" id="twBloom" checked></label>
+      <label class="tweak-row">animation <input type="checkbox" id="twMotion" checked></label>
+      <label class="tweak-row">audio fx (synthesizer) <input type="checkbox" id="twAudio" checked></label>
+      <label class="tweak-row">cursor 3d field <input type="checkbox" id="twCanvas" checked></label>
+      <label class="tweak-row">text size <input type="range" id="twSize" min="13" max="18" step="1" value="14"><span id="twSizeVal">14px</span></label>
+      <div class="tweak-note">Everything is stored locally. No network calls, no telemetry — this app is one folder on your disk.</div>
+      <div class="tweak-actions">
+        <button class="btn danger" id="resetAll">wipe all progress</button>
+        <button class="btn" id="exportAll">export progress .json</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script src="assets/data-modules.js"></script>
+<script src="assets/data-tools.js"></script>
+<script src="assets/data-tools2.js"></script>
+<script src="assets/data-tools3.js"></script>
+<script src="assets/data-tools4.js"></script>
+<script src="assets/data-labs.js"></script>
+<script src="assets/data-labs2.js"></script>
+<script src="assets/data-drills.js"></script>
+<script src="assets/data-drills2.js"></script>
+<script src="assets/data-terminal.js"></script>
+<script src="assets/data-console-extra.js"></script>
+<script src="assets/data-forge.js"></script>
+<script src="assets/svgator-sigils.js"></script>
+<script src="assets/ascii-3d-engine.js"></script>
+<script src="assets/ghostbyte-3d.js"></script>
+<script src="assets/rough-notation.js"></script>
+<script src="assets/matrix-notation.js"></script>
+<script src="assets/matrix-text.js"></script>
+<script src="assets/pixel-art-cards.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/story-campaign.js"></script>
+<script src="assets/views-learn.js"></script>
+<script src="assets/views-arsenal.js"></script>
+<script src="assets/views-practice.js"></script>
+<script src="assets/audio-synth.js"></script>
+<script src="assets/ambient-canvas.js"></script>
+<script src="assets/float-console.js"></script>
+<script src="assets/hermetic-cursor.js"></script>
+<script src="assets/start.js"></script>
+</body>
+</html>

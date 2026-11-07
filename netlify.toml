@@ -1,0 +1,27 @@
+# ZothPen — standalone static site (its own site, its own root).
+# No build step: the publish directory is the repo root that holds index.html.
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# This app is hash-routed (#/home, #/tools, ...), so every real route is "/".
+# No catch-all rewrite on purpose: unknown paths should 404 instead of
+# soft-404-ing back to the app shell.
