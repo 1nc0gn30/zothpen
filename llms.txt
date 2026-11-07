@@ -7,6 +7,7 @@
 > 17 scripting recipes. No backend, no accounts, no telemetry.
 
 Live: https://zothpen.netlify.app
+Source: https://github.com/1nc0gn30/zothpen
 
 ## Course structure
 

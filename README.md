@@ -5,7 +5,7 @@
 > 16 hands-on labs, 74 drills, 17 scripting recipes. No backend, no accounts,
 > no analytics, no paywall.
 >
-> Live: https://zothpen.netlify.app
+> Live: https://zothpen.netlify.app · Source: https://github.com/1nc0gn30/zothpen
 
 ## What it is
 
