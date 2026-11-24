@@ -71,9 +71,12 @@ All SEO/meta/JSON-LD lives in the `<head>` of `index.html` and is hand-written
 `https://zothpen.netlify.app/`. When the `zothpen.nullai.tech` domain is live,
 replace that one origin in those five places and re-deploy.
 
-## Attribution
+## Attribution & Support
 
-Built by [@1nc0gn30](https://github.com/1nc0gn30) • [NullAI](https://nullai.tech).
+Engineered by **Neal Frazier Tech** ([@1nc0gn30](https://github.com/1nc0gn30)) • [NullAI Platform](https://nullai.tech).
+
+- 100% free & open-access: [Buy Us a Coffee](https://buy.stripe.com/3cIfZg27PdKo2D64Ocfw40X)
+- Solana Tip: `GG2eQbVh8ut1BK6j1A2tz7pSySdLpD38BgyEhGcxdXoK`
 
 ## Legal
 
